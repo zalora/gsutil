@@ -31,7 +31,7 @@ OBJECT_REGEX = re.compile(
 # Matches versioned object strings of the form 'gs://bucket/obj#1234'
 GS_GENERATION_REGEX = re.compile(r'(?P<object>.+)#(?P<generation>[0-9]+)$')
 # Matches versioned object strings of the form 's3://bucket/obj#NULL'
-S3_VERSION_REGEX = re.compile(r'(?P<object>.+)#(?P<version_id>.+)$')
+S3_VERSION_REGEX = re.compile(r'(?P<object>.+)#(?P<version_id>[0-9]+)$')
 # Matches file strings of the form 'file://dir/filename'
 FILE_OBJECT_REGEX = re.compile(r'([^:]*://)(?P<filepath>.*)')
 # Regex to disallow buckets violating charset or not [3..255] chars total.
